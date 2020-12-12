@@ -8,13 +8,14 @@ function initMap(){
     //Map object.
     var map = new google.maps.Map(document.getElementById('map'), options);
 
-    //Bus locations.
+    //Bus locations and info.
     var bus = [
         {
             location: {lat: 19.2856, lng: 72.8691} //Mira Road
         },
         {
-            location: {lat: 18.9912, lng: 72.8145} //South Bombay
+            location: {lat: 18.9912, lng: 72.8145}, //South Bombay
+            info: '<h3>Bus 1 reached at 12:05pm</h3>'
         }
     ];
 
@@ -30,8 +31,24 @@ function initMap(){
             position: buses.location,
             map:map,
         });
+
+        //Check whether icon has been customized.
+        if(buses.iconImage){
+            marker.setIcon(buses.iconImage);
+        }
+  
+        //Check whether extra info is given.
+        if(buses.info){
+            var infoWindow = new google.maps.InfoWindow({
+                content: buses.info
+            });
+
+            marker.addListener('click', function(){
+                infoWindow.open(map, marker);
+            });
+        }
     }
-    
+
     /*
     var marker = new google.maps.Marker({
       position:{lat:19.0760,lng:72.8777},
