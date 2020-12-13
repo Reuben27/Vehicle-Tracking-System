@@ -9,7 +9,7 @@ function initMap(){
     var map = new google.maps.Map(document.getElementById('map'), options);
 
     //************************************************************************
-    var coord = [[90,90],[45,45],[180,180],[60,60]];
+    var buses = [[90,90],[45,45],[180,180],[60,60]];
     var counter=0; 
     //coord keeps updating from database
     var delay = 5000; //marker updates every 5 seconds
@@ -26,11 +26,11 @@ function initMap(){
         //Bus locations and info.
         var bus = [
             {
-                location: {lat:coord[counter][0] , lng: coord[counter][1]} 
+                location: {lat:buses[counter][0] , lng: buses[counter][1]} 
             }
            
         ];
-        addMarker(coord[counter]);
+        addMarker(buses[counter]);
         // Loop through the bus locations.
         // for(var i = 0;i < bus.length;i++){
         //     // Add marker
