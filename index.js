@@ -30,7 +30,7 @@ function initMap(){
             }
            
         ];
-
+        addMarker(coord[counter]);
         // Loop through the bus locations.
         // for(var i = 0;i < bus.length;i++){
         //     // Add marker
@@ -63,7 +63,7 @@ function initMap(){
 
     }//while loop
     //************************************************************************
-    
+
     /*
     var marker = new google.maps.Marker({
       position:{lat:19.0760,lng:72.8777},
