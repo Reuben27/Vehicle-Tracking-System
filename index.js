@@ -64,7 +64,7 @@ function initMap(){
 
         function myLoop() {         //  create a loop function
           setTimeout(function() {   //  call a 3s setTimeout when the loop is called
-            addMarker(bus[counter])
+            addMarker(bus[0])
             counter=counter+1;   //  your code here
             i++;                    //  increment the counter
             if (i < 10) {           //  if the counter < 10, call the loop function
@@ -73,10 +73,10 @@ function initMap(){
           }, 5000)
         }
 
-        addMarker(bus[counter])
-        counter++; 
-        addMarker(bus[counter])
-        counter++; 
+        // addMarker(bus[counter])
+        // counter++; 
+        // addMarker(bus[counter])
+        // counter++; 
 
         myLoop(); 
   
