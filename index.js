@@ -8,28 +8,28 @@ function initMap(){
 
      //Function to add markers dynamically.
 
-     function addMarker(buses){
-            var marker = new google.maps.Marker({
-                position: buses.location,
-                map:map,
+    function addMarker(buses){
+        var marker = new google.maps.Marker({
+            position: buses.location,
+            map:map,
+        });
+
+        //Check whether icon has been customized.
+        if(buses.iconImage){
+            marker.setIcon(buses.iconImage);
+        }
+    
+        //Check whether extra info is given.
+        if(buses.info){
+            var infoWindow = new google.maps.InfoWindow({
+                content: buses.info
             });
 
-            //Check whether icon has been customized.
-            if(buses.iconImage){
-                marker.setIcon(buses.iconImage);
-            }
-      
-            //Check whether extra info is given.
-            if(buses.info){
-                var infoWindow = new google.maps.InfoWindow({
-                    content: buses.info
-                });
-
-                marker.addListener('click', function(){
-                    infoWindow.open(map, marker);
-                });
-            }
+            marker.addListener('click', function(){
+                infoWindow.open(map, marker);
+            });
         }
+    }
     
     //Map object.
     var map = new google.maps.Map(document.getElementById('map'), options);
