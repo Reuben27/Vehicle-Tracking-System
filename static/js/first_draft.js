@@ -1,3 +1,4 @@
+//First try at Google Maps Javascript API
 function initMap(){
     //Shows the google map with its center at the given coordinates.
     var options = {
