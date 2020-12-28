@@ -13,8 +13,8 @@ TinyGPSPlus gps;
 // The serial connection to the GPS device
 SoftwareSerial GPS(RXPin, TXPin);
 
-float latitude = 25.689;
-float longitude = 58.35;
+float latitude;
+float longitude;
 
  
 void setup()
