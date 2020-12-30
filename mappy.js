@@ -17,13 +17,7 @@ let markers = [];
 //To add markers and remove one by one.
 function initMap() {
   const mumbai = { lat:19.0760,lng:72.8777 };
-  map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 8,
-    center: mumbai,
-    mapTypeId: "terrain",
-  });
-
-  
+ 
     var client = new HttpClient();
     var obj; 
     var lati;
@@ -53,8 +47,13 @@ function initMap() {
     console.log(typeof(lati));
     console.log(lati);
     var curr = {lat: lati, lng: longi };
+    map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 16,
+        center: curr,
+        mapTypeId: "terrain",
+      }); 
     addMarker(curr);
-    }, 10000);
+    }, 1000);
     
 }
 
