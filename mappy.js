@@ -60,6 +60,8 @@ function initMap() {
 
     console.log("Hey everybody what you gonna do today!!");
 
+    var i = 0;
+
     setInterval(function(){
         client.get('https://api.thingspeak.com/channels/1271022/feeds.json?results=2', function(response) {
             console.log(response);
@@ -86,13 +88,13 @@ function initMap() {
             curr = {lat: lati, lng: longi };
             if (curr != prev){
                 addMarker(curr);
-                deletemarker(0);
+                deletemarker(i);
+                i++;
                 map.setCenter(curr);
                 prev = curr;
             }
         }, 5000);
     }, 15000);
-    
 }
 
 function addMarker(location) {
