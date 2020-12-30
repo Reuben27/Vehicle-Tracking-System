@@ -53,7 +53,7 @@ function initMap() {
         mapTypeId: "terrain",
       }); 
     addMarker(curr);
-    }, 1000);
+    }, 5000);
     
 }
 
