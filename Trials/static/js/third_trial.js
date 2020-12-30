@@ -1,3 +1,4 @@
+//Third try for showing live location. Addition of markers followed by the removal of the redundant markers
 let map;
 let markers = [];
 

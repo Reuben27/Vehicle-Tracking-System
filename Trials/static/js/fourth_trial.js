@@ -1,4 +1,6 @@
-// Your web app's Firebase configuration
+//File was named as init-firebase.js
+//Fourth try by using firebase as the real time database for storing the locations sent by the gsrm module.
+//The web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyBGY4NS2f7IQoj6DTJZmF2DdA_hmuh5dLw",
     authDomain: "poiuyt123.firebaseapp.com",
@@ -17,10 +19,3 @@
 firebase.database().ref('poiuyt123-default-rtdb').on('value',(snap)=>{
     console.log(snap.val());
 });
-/*
-ref.on("value", function(snapshot) {
-   console.log(snapshot.val());
-}, function (error) {
-   console.log("Error: " + error.code);
-});
-*/
