@@ -1,4 +1,6 @@
 //First try at Google Maps Javascript API
+//Adding markers dynamically to a google map on predetermined locations.
+
 function initMap(){
     //Shows the google map with its center at the given coordinates.
     var options = {
@@ -49,12 +51,4 @@ function initMap(){
             });
         }
     }
-
-    /*
-    var marker = new google.maps.Marker({
-      position:{lat:19.0760,lng:72.8777},
-      map:map,
-      //custom icon //icon: 'map-pin.svg'
-    });
-    */
 }

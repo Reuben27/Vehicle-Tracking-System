@@ -86,6 +86,7 @@ function initMap() {
             curr = {lat: lati, lng: longi };
             if (curr != prev){
                 addMarker(curr);
+                deletemarker(0);
                 map.setCenter(curr);
                 prev = curr;
             }
@@ -100,4 +101,8 @@ function addMarker(location) {
         map: map,
     });
     markers.push(marker);
+}
+
+function deletemarker(i){
+    markers[i].setMap(null);
 }
