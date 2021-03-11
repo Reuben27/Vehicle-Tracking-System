@@ -64,7 +64,7 @@ async function initMap(){
             map.setCenter(curr);
             prev = curr;
         }
-    }, 10000);
+    }, 10000); 
 
 }
 
