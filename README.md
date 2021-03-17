@@ -1,16 +1,14 @@
 # Vehicle-Tracking-System
 
-## What it does?
-
-Tracks the buses on the campus in real time and showcases it on a web app.
+To track the buses on the campus in real time and showcase it on a web app.
 
 Initial try can be viewed here:- https://reuben27.github.io/Vehicle-Tracking-System/Tracker.html
 
-## How it does what it does?
+## Working
 
-- The Live-location.ino file send the current location to the thinkspeak .....
+- The Live-location.ino file determines the corrdinates using the gsm module. It then sends the coordinates to the thinkspeak database.
 
-- The Tracker.js file displays the map with the current location of the bus at its center using google maps javascript api. It then sends a request and reads the data from the database after a specified time interval. It then updates the marker on the google map and removes the previous one. This process is repeated everytime a new location is read.
+- The Tracker.js file displays the map with the current location of the bus using google maps javascript api. The marker gets updated everytime a new location is read.
 
 ## Team Members
 
