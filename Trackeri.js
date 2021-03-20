@@ -43,14 +43,14 @@ function initMap(){
         console.log("Location last updated on:- " + time);
     });
 
-    setTimeout(function(){        
+    setTimeout(function(){         
         var curr = {lat: lati, lng: longi };
+        prev = curr;     
         map = new google.maps.Map(document.getElementById("map"), {
             zoom: 16,
             center: curr,
             mapTypeId: "terrain",
         });   
-        prev = curr;      
         addMarker(curr);
         //map.setCenter(curr); 
         repeater();
