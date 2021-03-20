@@ -93,7 +93,7 @@ function initMap() {
         }, 5000);
     }, 15000);
 }
-
+ 
 //Function to add marker to the map at location.
 function addMarker(location) {
     const marker = new google.maps.Marker({

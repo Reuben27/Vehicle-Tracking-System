@@ -44,15 +44,15 @@ function initMap(){
     });
 
     setTimeout(function(){        
+        var curr = {lat: lati, lng: longi };
         map = new google.maps.Map(document.getElementById("map"), {
             zoom: 16,
-            center: iitgandhinagar,
+            center: curr,
             mapTypeId: "terrain",
         });   
-        var curr = {lat: lati, lng: longi };
         prev = curr;      
         addMarker(curr);
-        map.setCenter(curr); 
+        //map.setCenter(curr); 
         repeater();
     }, 3000);    
 }
