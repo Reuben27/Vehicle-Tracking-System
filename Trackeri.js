@@ -82,8 +82,6 @@ function repeater(){
     });
 
     setTimeout(function(){
-        console.log(typeof(lati));
-        console.log(lati);
         curr = {lat: lati, lng: longi };
         if (curr != prev){
             addMarker(curr);
