@@ -52,7 +52,7 @@ function initMap(){
         var curr = {lat: lati, lng: longi };
         prev = curr;      
         addMarker(curr);
-        //map.setCenter(curr); 
+        map.setCenter(curr); 
         repeater();
     }, 3000);    
 }
